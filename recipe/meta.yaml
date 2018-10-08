@@ -1,6 +1,6 @@
 {% set name = "click-spinner" %}
-{% set version = "0.1.6" %}
-{% set sha256 = "59516d1a6ea83d044e51d9d6b70310f3ddfffd71584b0f0138e4a352c7e57473" %}
+{% set version = "0.1.7" %}
+{% set sha256 = "a0703b4a21a1ba377716c5c768928b6c7575c087af926d3d586818426982ea30" %}
 
 package:
   name: {{ name|lower }}
