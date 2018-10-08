@@ -10,6 +10,7 @@ source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: {{ sha256 }}
   - url: 'file://{{ environ["RECIPE_DIR"] }}/README.md'
+    sha256: 'ce6b86727ef77aa026826413de102e0076c773255698985b537792d49059219e'
     fn: README.md
 
 build:
