@@ -1,14 +1,17 @@
 {% set name = "click-spinner" %}
-{% set version = "0.1.8" %}
-{% set sha256 = "67b5af5e825faf82a4fc6cda77c58359abe716fb1c9bc12cc7bea9a0cae1fc8e" %}
+{% set version = "0.1.1" %}
+{% set sha256 = "3fc5242797a1009cc40b2987709c8c75ab36b282cfb067a03e610495395243ea" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: {{ sha256 }}
+  - url: 'file://{{ environ["RECIPE_DIR"] }}/README.md'
+    sha256: 'ce6b86727ef77aa026826413de102e0076c773255698985b537792d49059219e'
+    fn: README.md
 
 build:
   noarch: python
@@ -26,7 +29,6 @@ test:
   requires:
     - click
     - pytest
-    - six
   imports:
     - click_spinner
   files:
