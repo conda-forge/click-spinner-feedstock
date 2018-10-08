@@ -1,6 +1,6 @@
 {% set name = "click-spinner" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "3fc5242797a1009cc40b2987709c8c75ab36b282cfb067a03e610495395243ea" %}
+{% set version = "0.1.3" %}
+{% set sha256 = "9e4077dc206aa622521d7d3d7436f58b7d0be37167fd7e2da2c8fc238fbf1265" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: {{ sha256 }}
   - url: 'file://{{ environ["RECIPE_DIR"] }}/README.md'
-    sha256: 'ce6b86727ef77aa026826413de102e0076c773255698985b537792d49059219e'
+    sha256: 'abe0f5f236791213b20a40aa6df3f61ff80c60e6572ae2b6ff52133c971284e3'
     fn: README.md
 
 build:
