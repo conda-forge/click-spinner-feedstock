@@ -28,6 +28,7 @@ test:
   requires:
     - click
     - pytest
+    - six
   imports:
     - click_spinner
   files:
