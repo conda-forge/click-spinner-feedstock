@@ -32,7 +32,7 @@ test:
   files:
     - test_spinner.py
   commands:
-    - py.test --pyargs test_spinner.py
+    - pytest
 
 about:
   home: https://github.com/click-contrib/click-spinner
