@@ -29,10 +29,10 @@ test:
     - six
   imports:
     - click_spinner
-  files:
-    - test_spinner.py
+  source_files:
+    - tests
   commands:
-    - pytest
+    - pytest tests
 
 about:
   home: https://github.com/click-contrib/click-spinner
