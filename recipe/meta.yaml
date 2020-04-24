@@ -1,6 +1,6 @@
 {% set name = "click-spinner" %}
-{% set version = "0.1.7" %}
-{% set sha256 = "a0703b4a21a1ba377716c5c768928b6c7575c087af926d3d586818426982ea30" %}
+{% set version = "0.1.10" %}
+{% set sha256 = "87eacf9d7298973a25d7615ef57d4782aebf913a532bba4b28a37e366e975daf" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
@@ -29,16 +29,16 @@ test:
     - six
   imports:
     - click_spinner
-  files:
-    - test_spinner.py
+  source_files:
+    - tests
   commands:
-    - py.test --pyargs test_spinner.py
+    - pytest tests
 
 about:
-  home: https://github.com/click-contrib/click-spinner 
+  home: https://github.com/click-contrib/click-spinner
   license: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
-  summary: "Show that your command line app is active"
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
+  summary: Show that your command line app is active
   description: |
     Sometimes you would just like to show the user some progress, but a 
     progress bar is not suitable because you don’t know how much longer it 
