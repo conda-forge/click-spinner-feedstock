@@ -1,13 +1,13 @@
 {% set name = "click-spinner" %}
-{% set version = "0.1.10" %}
-{% set sha256 = "87eacf9d7298973a25d7615ef57d4782aebf913a532bba4b28a37e366e975daf" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "01371550596bc18f1e1546bb2956745eed387235235e664bc96f8cc675b7d6e8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
