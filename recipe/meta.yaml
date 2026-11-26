@@ -17,16 +17,17 @@ build:
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python
+    - python >={{ python_min }}
 
 test:
   requires:
     - click
     - pytest
+    - python {{ python_min }}
   imports:
     - click_spinner
   source_files:
